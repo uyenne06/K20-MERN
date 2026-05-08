@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-05-table and form</title>
+    <style>
+        table, 
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- tìm hiểu về table và tạo form -->
+    <table>
+       <tr>
+        <td colspan="2">1</td>
+        <td>3</td>
+       </tr>
+       <tr>
+        <td rowspan="3">4</td>
+        <td>5</td>
+        <td>6</td>
+       </tr>
+       <tr>
+        <td>8</td>
+        <td>9</td>
+       </tr>
+       <tr>
+        <td>11</td>
+        <td>12</td>
+       </tr>
+    </table>
+
+    <!-- FORM -->
+    <form>
+        <!-- thu thập thông tin -->
+        <!-- submit -->
+        <div>
+            <label for="username">Nhập username</label>
+            <input 
+            id="username" 
+            name="username"
+            type="text" 
+            placeholder="Nhập username đi"
+            value="ahuhu"
+            >
+        </div>
+        <!--  -->
+        <div>
+            <label for="pwd">password</label>
+            <input type="password" name="password" id="pwd">
+        </div>
+        <a href="#" tabindex="1">quen mat khau</a>
+
+        <!-- một vài type của input -->
+        <input type="email">
+        <input type="range" max="20", min="10", step="1">
+        <input type="date">
+        <input type="color">
+        <input type="file">
+        <br>
+        <br>
+        <br>
+        <div>
+            <p>giới tính</p>
+            <input type="radio" name="gender" id="nam" value="name">
+            <label for="nam">nam</label>
+            <br>
+            <input type="radio" name="gender" id="nữ" value="nữ">
+            <label for="nữ">nữ</label>
+        </div>
+        <!--  -->
+        <select name="car" id="">
+            <option value="audiR8">audi R8</option>
+            <option selected value="mec">Mec E300</option>
+            <option value="bmw">BMW i8</option>
+        </select>
+        <!--  -->
+        <input type="submit" value="đăng ký">
+        <textarea style="max-width: 300px; min-width: 300px"></textarea>
+        <!--  -->
+        <fieldset>
+            <legend>Hello</legend>
+            <p>Xin chao moi nguoi</p>
+        </fieldset>
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-layout</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- background | dựng layout bằng float -->
+    <div class="demo1-bg"></div>
+    <div class="demo2-bg"></div>
+    <!-- làm bằng ví dụ banner -->
+    <div class="container">
+        <div class="banner clearfix">
+            <div class="banner_block banner_block_left">
+                <img src="./bannerBu.png" alt="">
+            </div>
+            <div class="banner_block banner_block_right">
+                <div class="banner_mini_img">
+                    <img src="./bannerNho1.png" alt="">
+                </div>
+                <div class="banner_mini_img">
+                    <img src="./bannerNho2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- menu cơ bản -->
+    <div class="container">
+        <!-- unorder list: danh sách k có thứ tự
+        li: list item: các item trong list -->
+        <ul class="menu_list clearfix">
+            <li class="menu_list_item">
+                <a class="menu_link" href="">Home</a>
+            </li>
+            <li class="menu_list_item">
+                <a class="menu_link" href="">Content</a>
+            </li>
+            <li class="menu_list_item">
+                <a class="menu_link" href="">Price</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

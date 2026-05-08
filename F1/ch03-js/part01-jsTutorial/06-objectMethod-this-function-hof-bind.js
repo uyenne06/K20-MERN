@@ -1,0 +1,301 @@
+// "use strict"
+console.log("Các method của object - this và function");
+//Object là gì: đối tượng 
+//tất cả những gì sờ được, đếm được đều là đối tượng 
+//      các obj dc mô tả bằng property và method 
+//      method(hành động - phương thức - hàm thuộc sở hữu của class | object)
+
+//ví dụ 
+let promotionBoy1 ={
+    nickName: "Lê Mười Điệp", //properties
+    age: 24, //properties
+    //method: hành động 
+    //fd
+    sayHi(){
+        console.log("Ahihi quẹo lựa quẹo lựa");
+    },
+    //fe
+    sayHi1: function () {
+        console.log("Ahihi quẹo lựa quẹo lựa");       
+    },
+    //fa
+    sayHi1: () => {
+        console.log("Ahihi quẹo lựa quẹo lựa");        
+    }
+};
+//cách tạo method bằng fe|fe về mặt lý thuyết có sự khác nhau
+//nhưng nhỏ không đáng kể 
+
+//ta có thể tạo thêm prop cho obj sau khi đã khởi tạo 
+promotionBoy1.money = 1000;
+promotionBoy1.chuiKhach = function(){
+    console.log("Ahihi đồ chó");
+}
+console.log(promotionBoy1);
+
+//nâng cao độ khó 1 tý
+//this trong method
+let promotionBoy2 ={
+    nickName: "Lê Mười Điệp", //properties
+    age: 24, //properties
+    //method: hành động 
+    //fd
+    showName(){
+        console.log("nickname là" + this.nickName); //this là undefined
+    },
+    //fe
+    showName1: function () {
+        console.log("nickname là" + this.nickName); //this là undefined      
+    },
+    //fa
+    showName2: () => {
+        console.log("nickname là" + this.nickName); //this là undefined      
+    }
+};
+
+
+//this trong js chỉ dc định nghĩa khi runtime 
+//nếu như k có ai gọi this thì luôn luôn là undefined
+//this đại diện cho object gọi nó 
+
+promotionBoy2.showName(); //fd|fe
+//fd giữ this cho đến khi có người gọi 
+//trong trường hợp này là có người gọi (promotionBoy2)
+//promotionBoy2.nickName => Lê Mười Điệp 
+
+//
+
+promotionBoy2.showName2(); //fa
+//fa thả this ra ngoài, k quan tâm người gọi 
+//this là window ngay cả khi normal hay use strict
+//window.nickName => undefined
+
+//Nâng cao thêm 1 tý 
+//tại sao lại cần dùng this 
+
+let promotionBoy3 = {
+    nickName: "Lê Mười Điệp", //properties
+    age: 24, //properties
+    //method: hành động 
+    //fd
+    showName(){
+        console.log("nickname là" + promotionBoy3.nickName); //this là undefined
+    },
+};
+
+let promotionBoy4 = promotionBoy3;
+promotionBoy3 = null;
+//promotionBoy4.showName(); //Cannot read properties of null
+
+//Nâng cao thêm 1 tý 
+let promotionBoy5 = {
+    nickName: "Lê Mười Điệp", //properties
+    age: 24, //properties
+    //method: hành động 
+    //fd
+    showName(){
+        let arrow = () => {
+            console.log("nickname là" + this.nickName); 
+        };
+        arrow();
+    },
+    //fd
+    showName1() {
+        let expression = function () {
+            console.log("nickname là" + this.nickName);  
+        };
+        expression();
+    },
+};
+//
+promotionBoy5.showName(); //fd > fa > this
+// fa thả this (fa k ai gọi - nhưng cũng k quan tâm)
+//this thả ra ngoài gặp showName là fd 
+//promotionBoy5 đang gọi showName => this là promotionBoy5
+//promotionBoy5.nickName: Lê Mười Điệp 
+
+// promotionBoy5.showName1();//fd > fe > this 
+//fe thì giữ this (không có ai gọi cả)
+//          normal                  use strict
+//      this là window          this là undefined
+//      window.nickName         undefined.nickName
+//      undefined               cannot read prop of undefined 
+
+//Nâng cao thêm 1 tý 
+//this trong callback 
+let promotionBoy6 = {
+    nickName: "Lê Mười Điệp", //properties
+    age: 24, //properties
+    //method: hành động 
+    //fd
+    showName() {
+        setTimeout(function () {
+            console.log("nickname là" + this.nickName);           
+        }, 2000);
+    },
+
+    //fd
+    showName2() {
+        setTimeout(() => {
+            console.log("nickname là" + this.nickName);           
+        }, 2000);
+    },
+};
+
+promotionBoy6.showName2();
+//undefined (use strict)
+//undefined (normal)
+
+
+//Nâng cao thêm tý 
+//HOR: Higher order function 
+//1. callback: hàm nhận vào 1 hàm làm đối số
+//2. closure: hàm con xài giá trị của hàm cha
+//3. currying: kỹ thuật tách parameter thành nhiều nhịp 
+//---------------------
+let sumDemo = function (a, b){
+    return a + b;
+};
+sumDemo(2,5);
+//HOF
+sumDemo = function (a) {
+    return function (b) {
+        return a + b;
+    };
+};
+
+sumDemo = (a) => (b) => a + b;
+
+//
+sumDemo(2)(9);
+/*
+function (b) {
+    return a + b;
+};
+*/
+
+//HOF: có 3 khái niệm 
+//1. callback: hàm nhận vào 1 hàm làm parameter
+const array1 = [1, 2, 3, 4, 5];
+
+array1.forEach((item)=>{
+    console.log(item); 
+});
+
+//2. Closure
+//  - 2.1 lexical scoping: hàm con dùng biến của hàm cha 
+//  - 2.2 closure: 1 funct return 1 funct
+
+//ứng dụng: tạo ra 1 hàm chuyên render các id không trùng lặp
+const initIdentity = () => {
+    let newId = 0; 
+    return () => ++newId;
+};
+//xài sai 
+console.log(initIdentity()); //() => ++newId; | newId = 0;
+console.log(initIdentity()()); //1
+console.log(initIdentity()()); //1
+
+//xài đúng 
+let closureDemo = initIdentity(); //() => ++newId; | newId = 0;
+console.log(closureDemo()); //1
+console.log(closureDemo()); //2
+console.log(closureDemo()); //3
+
+//viết 1 hàm xử lý 3 bài toán sau 
+//1. tìm các số từ 0 - 10 là số lẻ
+//2. tìm các số từ 0 - 20 là số chẵn 
+//3. tìm các số chẵn là số chia 3 dư 2 
+
+//callback
+function handle3(end, checkNum) {
+    let result = [];
+    for (let number = 0; number <= end; number++){
+        if(checkNum(number)) result.push(number);
+    }
+    return result;
+}
+
+console.log(handle3(10, (number) => number % 2 == 1));
+console.log(handle3(20, (number) => number % 2 == 0));
+console.log(handle3(30, (number) => number % 3 == 2));
+
+//currying
+handle4 = (end) => (checkNum) => {
+    let result = [];
+    for (let number = 0; number <= end; number++){
+        if(checkNum(number)) result.push(number);
+    }
+    return result;
+}; //ÔN KỸ !!! IMPORTANT !!! 
+
+console.log(handle4(10)((number) => number % 2 == 1));
+
+//----------------------
+//Call | Apply | Bind: dùng để định nghĩa this 
+//trong trường hợp bất khả kháng 
+const people = {
+    print(age, location){
+        console.log(this.fullname + " " + age + " " + location);       
+    },
+};
+
+people.print(10, "TP HCM"); //undefined 10 TP HCM 
+//this là people 
+
+const diep = { fullname : "Lê Mười Điệp" };
+//1. call(object, ...parameter cũ)
+people.print.call(diep, 10, "TP HCM");
+//2. apply(object, [...parameter cũ])
+people.print.apply(diep, [10, "TP HCM"]);
+//3. bind(object)(...parameter cũ)
+people.print.bind(diep)(10, "TP HCM");
+people.print.bind(diep, 10, "TP HCM")();
+
+let promotionBoy7 = {
+    nickName: "Lê Mười Điệp", //properties
+    age: 24, //properties
+    //method: hành động 
+    //fd
+    // showName() {
+    //     setTimeout(
+    //         function () {
+    //         console.log("nickname là promotionBoy7" + this.nickName);           
+    //     }.bind(this), 2000);
+    // },
+    showName() {
+        let expression = function () {
+            console.log("nickname là promotionBoy7" + this.nickName);           
+        }.bind(this);//đưa this ở ngoài vào trong hàm để xài 
+
+        expression();
+    },
+};
+promotionBoy7.showName();
+
+//datetime
+//thời gian trong js là object | milisecond
+//được tính từ 1/1/1970 chuẩn utc
+//có 4 cách khởi tạo 
+let a = new Date(); //Tue Sep 16 2025 21:10:30 GMT+0700 (Indochina Time)
+a = new Date(1758032066796);
+a = new Date("2025-9-16");
+a = new Date(2025, 8, 16, 21, 14, 0, 0);
+console.log(a);
+//y/m-1/d/h/m/s/ms
+
+// getDate()        : lấy ngày trong tháng //16
+// getDay()         : lấy ngày trong tuần (0: chủ nhật - 6:thứ 7);
+// getFullYear()    : lấy năm
+// getHours()       : lấy giờ 0-23
+// getMilliseconds(): lấy mili giây (0-999)
+// getMinutes()     : lấy về phút (0-59)
+// getMonth()       : lấy về tháng (0 -11)
+// getSeconds()     : lấy về giây (0-59)
+// toISOString()    : lấy định dạng thời gian chuẩn
+//dùng để bỏ vào DBI/ vì các ngôn ngữ trình duyệt khác
+//đểu có thể chuyển từ ISO này về dạng bth được
+console.log(a.toISOString()); //2022-08-17T14:10:32.100Z
+
+
+

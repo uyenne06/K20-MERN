@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: "Roboto Condensed", sans-serif;
+}
+body{
+    font-size: 1.6rem;
+    padding-bottom: 1200px;
+}
+/* flex */
+.cha{
+    border: 0.3rem solid red;
+    display: flex;
+    justify-content: center;
+}
+.con1{
+    border: 0.3rem solid blue;
+    width: 10rem;
+    height: 20rem;
+}
+.con2{
+    border: 0.3rem solid green;
+    width: 10rem;
+    height: 20rem;
+}
+.chachu{
+    border: 0.3rem solid red;
+    display: flex;
+}
+.chau{
+    border: 0.3rem solid blue;
+}
+.chat{
+    border: 0.3rem solid green;
+}
+/* demo position */
+.big-div{
+    border: 0.2rem solid teal;
+    width: 30rem;
+    position: relative;
+}
+.small-div{
+    border: 0.2rem solid blue;
+    background-color: cadetblue;
+    /* position: relative;
+    top: 2rem;
+    left: 2rem; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* 
+position
+- static: tĩnh | mặc định, k xê dịch
+- relative: tương đối | so sánh với vị trí ban đầu của em 
+- absolute: tuyệt đối | dựa trên một thằng cha có position khác static
+- fixed: cố định ở trên màn hình 
+*/
+.btn{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+.ahihi{
+    /* display: inline-block; */
+    position: sticky;
+    background-color: brown;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+/* pseudo Element */
+.demo-pseudo-e::before{
+    content: "Tôi";
+    display: block
+}
+.demo-pseudo-e::after{
+    content: "Bạn";
+}
+/* btn-style */
+.btn-style{
+    outline: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    position: relative;
+    transition: 0.3s ease-in;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+    color: black;
+}
+.btn-style::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 0%;
+    width: 0%;
+    transition: 0.3s ease-in;
+    z-index: -1;
+}
+.btn-style:hover::before{
+    width: 100%;
+    left: 0;
+    right: auto;
+    height: 100%;
+    bottom: 0;
+    top: auto;
+}
+.btn-style::after{
+    content: "";
+    background-color: lightgreen;
+    /* border: 1px solid lightgreen; */
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    bottom: 0;
+    transition: 0.3s ease-in;
+    z-index: -2;
+}
+.btn-style:hover::after{
+    top: 0;
+    bottom: auto;
+    right: 0;
+    left: auto;
+    height: 0%;
+    width: 0%;
+}
+.btn-style:hover{
+    color: white;
+}
+/*  */
+.container{
+    /* border: 3px solid red; */
+    max-width: 1004px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.carousel{
+    /* border: 1px solid green; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    border: 1px solid #e3e3e3;
+    width: 20rem;
+    /* height: 30rem; */
+    padding: 0.2rem;
+    margin: 0.04rem;
+}
+.card-img{
+    width: 19.4rem;
+    height: 19.4rem;
+    /* border: 3px solid purple; */
+}
+.card-img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.card-infor{
+    height: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.card-information{
+    width: 100%;
+}
+.card-control{
+    width: 100%;
+    display: flex;
+}
+.card-control button{
+    color: white;
+    border: 1px solid orange;
+    background-color: #ff7337;
+    display: block;
+    width: 50%;
+    padding: 0.5rem 1rem;
+}
+.card-control button:hover{
+    background-color: #b94e20;
+}

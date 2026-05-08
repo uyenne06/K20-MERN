@@ -1,0 +1,39 @@
+/* stylesheet: nơi tổng hợp các style mà mình dùng */
+*{
+    box-sizing: border-box;
+}
+.demo-btn{
+    color: teal;
+    /* transition: 0.3s; */
+}
+/* nếu không nói về status thì css này sẽ ảnh hưởng vào tất cả các 
+status của thẻ */
+.demo-btn:active{
+    color: hotpink !important;
+    /* font-size: 20px; */
+}
+.demo-btn:hover{
+    color: lightblue;
+    /* font-size: 20px; */
+}
+.demo1-btn{
+    display: inline-block;
+    border: 2px solid black;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.3s ease-in;
+}
+.demo1-btn:hover{
+    background-color: hotpink;
+    color: white;
+    border: 2px solid pink;
+}
+
+/* model box
+
+*/

@@ -1,0 +1,141 @@
+<!-- 
+    HTML: hypertext markup language
+    ngôn ngữ đánh dấu siêu văn bản 
+    đây không phải là ngôn ngữ lập trình 
+    vì nó thiếu các syntax về cấu trúc 
+    if else, for, while
+-->
+
+<!-- cái file mà mình đang thao tác nó là document: tài liệu
+html dùng để làm đẹp nội dung trong document
+document của mình nó chạy trên nền tảng webpage
+
+Web Brower là dùng để duyệt document
+document làm đẹp bằng gì thì kệ người ta 
+html dùng để làm document
+-->
+<!-- trong html các phần tử là các tag|thẻ -->
+<!-- trong 1 tag có những gì
+    <tagName attribute> content </tagName>
+-->
+
+<!DOCTYPE html>
+<html lang="vi" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 1</title>
+</head>
+<body>
+    <!-- bộ heading: dùng để hiển thị các title: tiêu đề -->
+    <h1>Anh Điệp đẹp trai quá h1</h1>
+    <h2 style="display: inline-block;">Anh Điệp đẹp trai quá h1</h2>
+    <h3 style="display: inline-block;">Anh Điệp đẹp trai quá h1</h3>
+    <h4>Anh Điệp đẹp trai quá h1</h4>
+    <h5>Anh Điệp đẹp trai quá h1</h5>
+    <h6>Anh Điệp đẹp trai quá h1</h6>
+    <!-- h càng có số lớn thì nội dung có size càng nhỏ dần
+    thẻ h được dùng để làm title hoặc chỉ mục 
+    tất cả các thẻ h đều có display là block
+    block: thẻ mà nó chiếm trọn 1 hàng và k cho thẻ nào cùng hàng vs nó
+    inline-block: thẻ mà có khối chỉ bao gọn content
+                    (k có trong môi trường tự nhiên)
+    inline: không phải là cái hộp (model box)
+    -->
+    <!-- p: paragraph: đoạn văn -->
+     <p>
+        tôi tên là &#8194;&#8194;&#8194;&#8194; Điệp, nhà tôi ở quận 9,
+        <br> 3 đời nhà tôi làm gỗ, đến đời tôi thì làm champion
+     </p>
+     <!-- 
+        br: break line: xuống hàng 
+        pre: preformatted 
+     -->
+        <pre>
+            tôi tên là      Điệp, nhà tôi ở quận 9,
+            3 đời nhà tôi làm gỗ, đến đời tôi thì làm champion
+        </pre>
+
+    <!-- hầu hết các thẻ đều có thể dùng attribute style -->
+     <p style="text-align: right">Hello</p>
+     <p style="text-align: right; display: inline-block; width: 50%;">Hello</p>
+     
+     
+     <!-- Tag formatting: bộ tượng hình -->
+     <p>
+        <em>xin chào</em> <strong>các bạn</strong> <del>tao</del> 
+        <small>tôi</small> là <mark>Điệp đẹp trai </mark>
+     </p>
+     <!--
+        i: italic: nghiêng| em: emphasized: nhấn mạnh 
+        b: bold: đậm      |         strong: quan trọng 
+    -->
+
+    <!-- sub/sup -->
+     <p>H<sub>2</sub>0: nước</p>
+     <p>ax<sup>2</sup> + bx + c = 0</p>
+
+     <!-- pseudo tag: tag giả | thẻ không có chức năng | thẻ phôi
+        span: inline
+        div: block 
+     -->
+    <p>
+        <span style="color: red; font-size: 30px; text-decoration: underline;"
+        >X</span>in chào bạn
+    </p>
+
+    <div>
+        <p style="color: red;">
+            Lòng ta trống lắm, lòng ta sụp <br>
+            Như túp nhà không bốn vách xiêu; <br>
+            Em chẳng cứu giùm, em bỏ mặc <br>
+            Mưa đưa ta đến bến Đìu hiu. 
+        </p>
+
+        <p style="color: blue; text-align: right;">
+            Em ở bên mình; ta ngó say, <br>
+            Song le bên ấy với bên này <br>
+            Cũng xa như những bờ xa cách, <br>
+            Không có thuyền qua, không cánh bay.
+        </p>
+
+        <p style="color: red;">
+            Ta thấy em xinh, khẽ lắc đầu. <br>
+            Bởi vì ta có được em đâu! <br>
+            Tay kia sẽ ấp nhiều tay khác, <br>
+            Môi ấy vì ai sẽ đượm mầu.
+        </p>
+    </div>
+    
+    <hr> <!-- horizon: đường chân trời -->
+
+    <!-- bài tập 2 -->
+    <div style="color: black;">
+        <h1 id="home">Câu 1: cấu trúc html cơ bản</h1>
+        <h2>Lorem ipsum</h2>
+        <h3>1.1 lorem ipsum dolor</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur aliquam deserunt qui vel exercitationem commodi repellendus hic! Illum nostrum
+        </p>
+        <h3>1.2 lorem ipsum dolor</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam atque, 
+            aliquam deserunt qui vel exercitationem commodi repellendus hic! Illum nostrum
+            quisquam dolor repudiandae sint esse voluptate odit natus non error.
+        </p>
+        <h2>2.lorem ipsum dolor</h2>
+        <p>Lorem ipsum dolor sit amet consectetur aliquam deserunt qui vel exercitationem commodi repellendus hic! Illum nostrum</p>
+        <p>Lorem ipsum dolor sit amet consectetur aliquam deserunt qui vel exercitationem commodi repellendus hic! Illum nostrum</p>
+    </div>
+
+   <!-- link hyperlinks -->
+    <a href="https://www.google.com/?hl=vi">click here</a>
+    <a href="#home">go home</a>
+    
+    <!-- a link hypertext references -->
+
+</body>
+</html>

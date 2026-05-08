@@ -1,0 +1,72 @@
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+/* font-size mặc định là 16px */
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+
+/* unit size: đơn vị đo kích thước
+    absolute unit: px | mm | cm
+    %: ăn theo cha nó 
+    em: tính font-size của cha nó là 1(em) đơn vị
+    rem: tính font-size của html là 1 (rem)
+
+*/
+.demo-inp{
+    margin: 4rem;
+    outline: none;
+    outline: 1px solid black;
+    outline-offset: -2px;
+}
+/* outline-offset: là khoảng cách từ border tới outline */
+.demo-border{
+    border: 5px solid teal;
+    border-top: 5px solid teal;
+    border-left: 5px solid rebeccapurple;
+    border-right: 5px solid rosybrown;
+    border-bottom: 5px solid skyblue;
+    border-radius: 3px;
+    
+}
+.circle{
+    width: 10rem;
+    height: 10rem;
+    border: 5px solid black;
+    border-top: 5px solid blue;
+    border-left: 5px solid red;
+    border-right: 5px solid brown;
+    border-bottom: 5px solid hotpink;
+    border-radius: 50%;
+    /* transition: 0.3s; */
+
+
+}
+/* .circle:hover{
+    border: 5px solid black;
+    border-radius: 50%;
+    transform: rotate(180deg);
+} */
+ /* các css liên quan đến text */
+.demo-text{
+    color: steelblue;
+    background-color: lightgreen;
+    font-size: 2rem;
+    /* direction: rtl; */
+    text-decoration: underline solid steelblue;
+    /* where style color size */
+    text-indent: 2rem;
+    /* letter-spacing: 2rem;
+    word-spacing: 2rem;
+    line-height: 1rem; */
+    text-shadow: 1px 2px 4px #3e3e3e;
+}
+.demo-text span{
+    vertical-align: middle;
+}

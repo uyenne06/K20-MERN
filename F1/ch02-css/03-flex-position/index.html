@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-layout-position</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Roboto+Condensed:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+    " rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- 
+        font | onclick | flex | position
+        pseudo element | button 
+    -->
+    <p>
+        xin chào mọi người mình đến từ piedteam <br>
+        mọi người ở đây đều không đẹp trai trừ mình 
+    </p>
+    <p class="ahihi">ahihihihihi</p>
+    <!-- flex -->
+    <div class="cha">
+        <div class="con1"></div>
+        <div class="con2"></div>
+    </div>
+    <!-- demo flex layout -->
+    <div class="chachu">
+        <div class="chau">
+            <h1>anh cháu thích cô chắc</h1>
+            <p>nhà anh cháu bên trái kế nhà cô chắc</p>
+            <p>mà có lẽ cô chắc chắc không thích anh cháu</p>
+        </div>
+        <div class="chac">
+            <h1>nhà cô chắc chắc là bên phải sát nhà anh cháu</h1>
+            <p>anh cháu cái gì cũng tốt trừ đôi đôn chề</p>
+            <p>anh cháu có vui chơi với jonny đen, và anh cáo</p>
+            <p>
+                dù rằng anh cháu có vẻ hích cô chắc nhưng chắc là chắc không thích đc
+                anh cháu vì anh chắc không chơi đồng dimond coin 
+            </p>
+        </div>
+    </div>
+    <!-- demo position -->
+    <div class="big-div">
+        <div class="small-div">tôi là div nhỏ</div>
+        <p>
+            tôi là một nội dung gì đó mà tui <br>
+            sẽ làm lãng phí thời gian đọc của bạn <br>
+            tôi là một nội dung gì đó mà tui <br>
+            sẽ làm lãng phí thời gian đọc của bạn <br>
+            tôi là một nội dung gì đó mà tui <br>
+            sẽ làm lãng phí thời gian đọc của bạn <br>
+        </p>
+    </div>
+    <!-- fixed -->
+    <button class="btn">send nude</button>
+    <!-- pseudo element: vật thể giả -->
+    <p class="demo-pseudo-e">xin chào</p>
+    <!-- btn: tạo 1 nút có hiệu ứng -->
+    <button class="btn-style">click me</button>
+    <!-- card carousel -->
+     <div class = "container">
+        <div class = "carousel">
+            <div class = "card">
+                <div class = "card-img">
+                    <img src="./pic.png" alt="" srcset="">
+                </div>
+                <div class = "card-infor">
+                    <div class="card-information">
+                        <p>Name: <span>Mohican chéo</span></p>
+                        <p>Price: <span>120.000Đ</span></p>
+                    </div>
+                    <div class="card-control">
+                        <button>Mua</button>
+                        <button>Ước</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-img">
+                    <img src="./pic.png" alt="" srcset="">
+                </div>
+                <div class = "card-infor">
+                    <div class="card-information">
+                        <p>Name: <span>Mohican chéo</span></p>
+                        <p>Price: <span>120.000Đ</span></p>
+                    </div>
+                    <div class="card-control">
+                        <button>Mua</button>
+                        <button>Ước</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-img">
+                    <img src="./pic.png" alt="" srcset="">
+                </div>
+                <div class = "card-infor">
+                    <div class="card-information">
+                        <p>Name: <span>Mohican chéo</span></p>
+                        <p>Price: <span>120.000Đ</span></p>
+                    </div>
+                    <div class="card-control">
+                        <button>Mua</button>
+                        <button>Ước</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-img">
+                    <img src="./pic.png" alt="" srcset="">
+                </div>
+                <div class = "card-infor">
+                    <div class="card-information">
+                        <p>Name: <span>Mohican chéo</span></p>
+                        <p>Price: <span>120.000Đ</span></p>
+                    </div>
+                    <div class="card-control">
+                        <button>Mua</button>
+                        <button>Ước</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-img">
+                    <img src="./pic.png" alt="" srcset="">
+                </div>
+                <div class = "card-infor">
+                    <div class="card-information">
+                        <p>Name: <span>Mohican chéo</span></p>
+                        <p>Price: <span>120.000Đ</span></p>
+                    </div>
+                    <div class="card-control">
+                        <button>Mua</button>
+                        <button>Ước</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-- splide -->
+    <div class="container">
+        <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class = "card">
+                        <div class = "card-img">
+                            <img src="./pic.png" alt="" srcset="">
+                        </div>
+                        <div class = "card-infor">
+                            <div class="card-information">
+                                <p>Name: <span>Mohican chéo</span></p>
+                                <p>Price: <span>120.000Đ</span></p>
+                            </div>
+                            <div class="card-control">
+                                <button>Mua</button>
+                                <button>Ước</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide"><div class = "card">
+                <div class = "card-img">
+                    <img src="./pic.png" alt="" srcset="">
+                </div>
+                <div class = "card-infor">
+                    <div class="card-information">
+                        <p>Name: <span>Mohican chéo</span></p>
+                        <p>Price: <span>120.000Đ</span></p>
+                    </div>
+                    <div class="card-control">
+                        <button>Mua</button>
+                        <button>Ước</button>
+                    </div>
+                </div>
+            </div></li>
+                <li class="splide__slide"><div class = "card">
+                <div class = "card-img">
+                    <img src="./pic.png" alt="" srcset="">
+                </div>
+                <div class = "card-infor">
+                    <div class="card-information">
+                        <p>Name: <span>Mohican chéo</span></p>
+                        <p>Price: <span>120.000Đ</span></p>
+                    </div>
+                    <div class="card-control">
+                        <button>Mua</button>
+                        <button>Ước</button>
+                    </div>
+                </div>
+            </div></li>
+                <li class="splide__slide"><div class = "card">
+                <div class = "card-img">
+                    <img src="./pic.png" alt="" srcset="">
+                </div>
+                <div class = "card-infor">
+                    <div class="card-information">
+                        <p>Name: <span>Mohican chéo</span></p>
+                        <p>Price: <span>120.000Đ</span></p>
+                    </div>
+                    <div class="card-control">
+                        <button>Mua</button>
+                        <button>Ước</button>
+                    </div>
+                </div>
+            </div></li>
+                <li class="splide__slide"><div class = "card">
+                <div class = "card-img">
+                    <img src="./pic.png" alt="" srcset="">
+                </div>
+                <div class = "card-infor">
+                    <div class="card-information">
+                        <p>Name: <span>Mohican chéo</span></p>
+                        <p>Price: <span>120.000Đ</span></p>
+                    </div>
+                    <div class="card-control">
+                        <button>Mua</button>
+                        <button>Ước</button>
+                    </div>
+                </div>
+            </div></li>
+            </ul>
+        </div>
+        </section>
+    </div>
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    "></script>
+    <script src="./style.js"></script>
+</body>
+</html>

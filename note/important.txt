@@ -1,0 +1,73 @@
+// let | const không có hoisting và có scope
+// var có hoisting và out scope 
+var: global scope, có hoisting, có reassign, tạo prop trên window
+let: block-scoped {}, ko hoisting, có reassign, KHÔNG, 
+const: block-scoped {}, ko hoisting, không reassign, KHÔNG
+
+// var sẽ k bị can thiệp bởi scope nào hết 
+// tạo biến bằng var là tạo global scope 
+ 
+null:      giá trị rỗng | biết kiểu những k biết giá trị 
+undefined: giá trị rỗng | không biết kiểu k biết giá trị 
+
+typeof null: là object !!!
+nhưng null dc xếp là primitive datatype vì null ở đầu k có tiền thân 
+
+// nếu hàm không có return thì nghĩa là nó đang return undefined
+
+let str = ""; //chuỗi rỗng
+str = null; //obj rỗng
+
+// null và undefined là primitiive datatype nên k thể '.' vào dc 
+// let ahihih = undefined;
+// ahihih.ngu; 
+
+//I - 2 Object datatype: là những thằng khác primitive datatype 
+
+//falsy: null, undefined, 0, -0, "", false, NaN
+//truthy: ngược lại falsy
+//chuỗi khác rỗng, số khác 0, obj đều là true
+
+console.log(2 !== "2");//true | means ===
+
+entry = key : value
+let array1 = [21, 17, 19];
+{0:21, 1:17, 2:19}
+iterable: tính khả duyệt
+//for in: duyệt key trong object 
+//các vòng for cơ bản đều sẽ duyệt mảng từ start đến end 
+
+//SET: tập hợp giá trị loại trùng
+let demoSet = new Set(["Điệp", "Huệ", "Lan", "Huệ"]);
+//demoSet ["Điệp", "Huệ", "Lan"]
+//set thì k có khả năng get, tại vì nó k có index => k có key 
+
+for (const key in demoSet) {
+    console.log(x);
+} // k có gì in ra cả, vì k có key
+
+//đa phần các object đều sẽ có chiều sâu nhưng lại k có iterable
+//tức là các object mình tạo ra thường k có khả năng lặp 
+//for of: dùng để duyệt value, nhưng thằng này chỉ chơi với iterable
+student1 = { name: "Điệp", point: 10, major: "SE" };
+console.log(student1);
+
+//for of: dùng để duyệt value, nhưng thằng này chỉ chơi với iterable
+student1 = { name: "Điệp", point: 10, major: "SE" };
+console.log(student1);
+// for (const x of student1) {
+//     console.log(x);  
+// }
+//Error : student1 is not iterable
+
+// for-each: không phải là cú pháp for, mà nó là method của iterable
+
+//nếu chỉ xài value thôi thì dc bỏ/ k cần khai báo key
+//nhưng nếu chỉ xài key thôi thì vẫn phải giữ lại value 
+
+//string là immutable: ko có "." gì có thể thay đổi được nó hết 
+
+//array trong js là mutable: method tác động vào object
+//không tạo rao object mới mà thường sẽ biến dạn object đó 
+
+//8.unshift(item): nhét item vào đầu mảng | return độ dài mới 

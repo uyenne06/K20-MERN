@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-uselessTag</title>
+    <style>
+        /* css */
+        /* select tag name: chọn đối tượng bằng tên thẻ */
+        p {
+            color: red;
+        }
+        /* select thằng thứ x từ trên xuống */
+        p:nth-child(2){
+            color: blue !important;
+        }
+        /* 
+            select class name: .classname{} 
+            select id: #
+        */
+        .dacbiet{
+            color: pink !important;
+        }
+        .dacbiet2{
+            font-size: 30px;
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <!-- học lướt qua những thẻ vô dụng -->
+    <!-- Quotations: trích dẫn -->
+
+    <p class="dacbiet dacbiet2">
+        có một người từng nói rằng: <br>
+        "nhà nghèo thì đi xe ôm, uống bia hơi" <br>
+        "người giàu thì đi xe hơi uống bia ôm" <br>
+        "muốn có chỗ đứng thì trước tiên phải có chỗ ngồi"
+    </p>
+
+    <p>
+        có một người từng nói rằng: <br>
+        <q>nhà nghèo thì đi xe ôm, uống bia hơi</q> <br>
+        <q>người giàu thì đi xe hơi uống bia ôm</q> <br>
+        <q>muốn có chỗ đứng thì trước tiên phải có chỗ ngồi</q>
+    </p>
+
+    <!-- q: quotation: ghi chú, tạo ra "" và k copy dc
+    display: inline -->
+
+    <!-- bonus: nếu mọi người k thích inline thì mọi người
+     có thể dùng thẻ blockquote -->
+
+    <!-- abbr:  -->
+    <p>Công chúa thuộc về <abbr title="Lê Điệp">người đẹp trai nhất</abbr></p>
+    <!-- address -->
+    <address>115/13 đình phong phú</address>
+    <!-- cite -->
+    <p><cite>Tác phẩm này được vẽ bởi</cite> ViEmVanGood</p>
+
+    <!-- bdo -->
+    <bdo dir="rtl">Xin chào ngày mới</bdo>
+
+    <!-- btvn -->
+     
+</body>
+</html>
